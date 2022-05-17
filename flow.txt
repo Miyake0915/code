@@ -1,0 +1,31 @@
+
+事前準備としてローカルリポジトリを作成
+
+mkdir sample
+cd sample
+
+ディレクトリを作成したら git init　でローカルリポジトリを作成
+git init
+
+次にファイルを作成および編集
+ファイルを作成したら「インデックスの追加及びコミットを行う
+git add sample.txt
+git commit -m "ブランチの確認"
+
+コミットまでできたらブランチを作成する
+git branch [ブランチ名]
+
+作成したブランチに履歴を更新するためにbranch_testをチェックアウトする
+git checkout branch_test
+
+git add sample.txt
+git commit -m "branch testを追加"
+
+送信する前に「git remote」コマンドを使用してリモートリポジトリに追加を行います。
+リポジトリのURLは先程GitHubで作成したリポジトリのURLを指定します。
+
+git remote add branch_test コード
+
+次にgit push でリモートリポジトリに送信を行う
+
+git push branch_test
